@@ -17,7 +17,7 @@
           "type": "session"
         },
         {
-          "foreground": "#23d18b",
+          "foreground": "#0fc469",
           "style": "powerline",
           "template": "\u279c \ue235({{ if .Error }}{{ .Error }}{{ else }}{{ if .Venv }}{{ .Venv }} {{ end }}{{ .Major }}.{{ .Minor }}{{ end }}) ",
           "type": "python"
@@ -34,7 +34,7 @@
             "fetch_upstream_icon": true
           },
           "style": "plain",
-          "template": "{{ .UpstreamIcon }}{{ .HEAD }}{{ .BranchStatus }}{{ if .Working.Changed }} ({{ .Working.String }}{{ end }}{{ if and (.Working.Changed) (.Staging.Changed) }} |{{ end }}{{ if .Staging.Changed }} \uf046 {{ .Staging.String }}{{ end }}{{ if gt .StashCount 0 }} \uf692 {{ .StashCount }}){{ end }} ",
+          "template": "{{ .UpstreamIcon }}{{ .HEAD }}{{ .BranchStatus }}{{ if .Working.Changed }} \uf044 {{ .Working.String }}{{ end }}{{ if and (.Working.Changed) (.Staging.Changed) }} |{{ end }}{{ if .Staging.Changed }} \uf046 {{ .Staging.String }}{{ end }}{{ if gt .StashCount 0 }} \uf692 {{ .StashCount }}{{ end }} ",
           "type": "git"
         }
       ],
@@ -95,12 +95,12 @@
       "newline": true,
       "segments": [
         {
-          "foreground": "#74bcda",
+          "foreground": "#77E4F7",
           "properties": {
             "style": "full"
           },
           "style": "plain",
-          "template": "\u2570\u2500 \uf07b {{ .Path }} ",
+          "template": "{{ .Path }} ",
           "type": "path"
         },
         {
@@ -113,11 +113,10 @@
       "type": "prompt"
     }
   ],
-  "console_title_template": "{{ .Folder }}",
   "transient_prompt": {
     "background": "transparent",
-    "foreground": "#23d18b",
-    "template": "\u27f6 "
+    "foreground": "#ffffff",
+    "template": "{{ .Shell }}> "
   },
-  "version": 2
+  "version": 1
 }

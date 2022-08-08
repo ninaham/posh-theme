@@ -26,8 +26,8 @@
           "foreground": "#9674DA",
           "foreground_templates": [
             "{{ if and (gt .Ahead 0) (gt .Behind 0) }}#FFCC80{{ end }}",
-            "{{ if gt .Ahead 0 }}#16c60c{{ end }}",
-            "{{ if gt .Behind 0 }}#f450de{{ end }}"
+            "{{ if gt .Ahead 0 }}#74DAA8{{ end }}",
+            "{{ if gt .Behind 0 }}#DA8174{{ end }}"
           ],
           "properties": {
             "fetch_status": true,
@@ -52,15 +52,6 @@
           "style": "plain",
           "template": " {{ if gt .Code 0 }}<#DA8174>\uf00d</>{{ else }}<#74DAA8>\uf42e</>{{ end }} ",
           "type": "exit"
-        },
-        {
-          "foreground": "#000000",
-          "background": "#c083fc",
-          "leading_diamond": "\ue0b6",
-          "style": "diamond",
-          "template": "{{ if gt .PhysicalPercentUsed 90.0 }}CPU: {{ round .PhysicalPercentUsed .Precision }}%{{ end }}",
-          "trailing_diamond": "\ue0b4 ",
-          "type": "sysinfo"
         },
         {
           "foreground": "#000000",

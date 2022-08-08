@@ -54,6 +54,24 @@
           "type": "exit"
         },
         {
+          "foreground": "#000000",
+          "background": "#c083fc",
+          "leading_diamond": "\ue0b6",
+          "style": "diamond",
+          "template": "{{ if gt .PhysicalPercentUsed 90.0 }}CPU: {{ round .PhysicalPercentUsed .Precision }}%{{ end }}",
+          "trailing_diamond": "\ue0b4 ",
+          "type": "sysinfo"
+        },
+        {
+          "foreground": "#000000",
+          "background": "#c083fc",
+          "leading_diamond": "\ue0b6",
+          "style": "diamond",
+          "template": "{{ if gt .PhysicalPercentUsed 90.0 }}RAM: {{ (div ((sub .PhysicalTotalMemory .PhysicalFreeMemory)|float64) 1000000000.0) }}/{{ (div .PhysicalTotalMemory 1000000000.0) }}GB{{end}}",
+          "trailing_diamond": "\ue0b4 ",
+          "type": "sysinfo"
+        },
+        {
           "leading_diamond": "\ue0b6",
           "style": "diamond",
           "foreground": "#ffffff",
@@ -148,6 +166,16 @@
     "background": "transparent",
     "foreground": "#74DAA8",
     "template": "\u27f6 "
+  },
+  "secondary_prompt": {
+    "background": "transparent",
+    "foreground": "#74bcda",
+    "template": "\u2570\u27f6 "
+  },
+  "valid_line": {
+    "background": "transparent",
+    "foreground": "#ffffff",
+    "template": ""
   },
   "version": 2
 }
